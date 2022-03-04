@@ -2,11 +2,11 @@
 In the first step for our system, we used a CNN model which can classify different sound noises. The second important part in our system is the Simulink simulation which takes the noise as an input and gives an output with noise minimized. In the end, a python script was used as a bridge to join both to obtain one complete system and the details can be seen below
 ## 1-CNN Model:
 We implemented the Deep CNN model described in Salamon and Bello's paper for Environmental Sound Classification on Urbansound8k dataset and achieved state of the art accuracy in the results. The model can classify any Noise to almost an accuracy of 86 percent. Complete details of this model along with its python files can be found here:
-(https://github.com/Sheraz-hassan/Deep-CNN-for-Environmental-Sound-Classification)
+[Deep-CNN-for-Environmental-Sound-Classification](https://github.com/Sheraz-hassan/Deep-CNN-for-Environmental-Sound-Classification)
 
 ## 2-Simulink ANC model:
 This Simulink ANC model takes a noise as input and adjusts its weight gradually so to reduce the output noise to its minimum. The ANC model used can be found here:
-(https://github.com/Sheraz-hassan/Active_Noise_Cancellation_Simulink)
+[Active_Noise_Cancellation_Simulink](https://github.com/Sheraz-hassan/Active_Noise_Cancellation_Simulink)
 
 ### Training the ANC model:
 This model was pretrained for our system on all the type of classes that were available in the Urbansound8K dataset and these pretrained weights for each class were saved. These weights are now ready to use to cancel any sound that enters the system without requiring to train and gradual cancellation of the sound. Complete details on how we trained the model are documented in “Readme” file inside the “ANC Model Training” folder.
@@ -18,5 +18,7 @@ The python script works as a connecting link between the CNN model and the Simul
 
 ## Requirements:
 Other than the python requirnments, following should be installed on the system for the code to work
+
 1-MATLAB and Simulink
+
 2-Certain Simulink toolboxes (Refer to the slx file to check all toolboxes requirements)
